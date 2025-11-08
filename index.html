@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BIENVENIDO A MI SITIO - SANTI</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -30,6 +34,7 @@
       display: flex;
       justify-content: center;
       gap: 30px;
+      flex-wrap: wrap; /* hace que se adapte */
     }
 
     nav li {
@@ -79,6 +84,7 @@
 
     h1 {
       color: #00bcd4;
+      font-size: 1.8em;
     }
 
     section {
@@ -92,10 +98,19 @@
 
     section h2 {
       color: #00bcd4;
+      font-size: 1.4em;
+    }
+
+    p {
+      font-size: 1em;
+      line-height: 1.5;
+      margin: 10px auto 30px;
+      color: #ccc;
+      max-width: 90%;
     }
 
     .foto-central {
-      width: 70%;
+      width: 80%;
       max-width: 600px;
       border-radius: 10px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.6);
@@ -106,12 +121,12 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 25px;
       margin-top: 20px;
     }
 
     .galeria img {
-      width: 70%;
+      width: 90%;
       max-width: 500px;
       height: auto;
       border-radius: 10px;
@@ -135,6 +150,46 @@
     .social a:hover {
       text-decoration: underline;
     }
+
+    /* 📱 --- RESPONSIVE DESIGN --- 📱 */
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.6em;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav ul ul {
+        position: static;
+        box-shadow: none;
+      }
+
+      nav li:hover ul {
+        display: none;
+      }
+
+      .galeria img {
+        width: 100%;
+      }
+
+      section {
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.4em;
+      }
+
+      p {
+        font-size: 0.95em;
+      }
+    }
   </style>
 </head>
 <body>
@@ -151,7 +206,7 @@
             <li><a href="#clashroyal">Clash Royale</a></li>
           </ul>
         </li>
-        <li><a href="https://www.youtube.com/@santinoperez-i9v" target="_blank">Contacto</a></li>
+        <li><a href="https://www.youtube.com/" target="_blank">Contacto</a></li>
       </ul>
     </nav>
   </header>
@@ -171,14 +226,30 @@
       <div class="galeria">
         <div id="roblox">
           <img src="./Asset/ROBLOX.jpg" alt="Roblox">
-          <p>Roblox es una plataforma de videojuegos en línea donde los usuarios pueden jugar y crear sus propios juegos. Permite a millones de jugadores explorar mundos creados por otros, usar su imaginación y compartir experiencias con amigos.</p>
+          <p>Roblox es una plataforma donde los usuarios pueden jugar y crear sus propios juegos. Permite a millones de jugadores explorar mundos creados por otros y compartir experiencias con amigos.</p>
         </div>
 
         <div id="minecraft">
           <img src="./Asset/Minecraft.jpg" alt="Minecraft">
-          <p>Minecraft es un videojuego de construcción y aventura donde los jugadores pueden explorar mundos abiertos, recolectar recursos y crear estructuras libremente con bloques. Fomenta la creatividad, la exploración y el trabajo en equipo.</p>
+          <p>Minecraft es un juego de construcción y aventura donde los jugadores exploran mundos abiertos, recolectan recursos y crean estructuras libremente con bloques.</p>
         </div>
 
         <div id="clashroyal">
           <img src="./Asset/ROYAL.webp" alt="Clash Royale">
-          <p>Clash Royale es un juego de estrategia en tiempo real donde los jugadores usan cartas de tropas, hechizos y defensas para destruir las torres del oponente. Combina acción, táctica y partidas rápidas cont
+          <p>Clash Royale es un juego de estrategia en tiempo real donde los jugadores usan cartas de tropas, hechizos y defensas para destruir las torres del oponente.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Mis redes:</p>
+    <div class="social">
+      <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+</body>
+</html>
